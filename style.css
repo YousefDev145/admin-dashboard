@@ -1,0 +1,41 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.sidebar {
+    background-color: steelblue;
+}
+
+.profile {
+    background-color: lightgrey;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+header {
+    background-color: whitesmoke;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 275px;
+}
+
+.side-info {
+    padding: 15px;
+    background-color: grey;
+    display: grid;
+    gap: 15px;
+}
+
+.announcements, .trending {
+    background-color: white;
+}
