@@ -14,6 +14,23 @@
     background-color: steelblue;
 }
 
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.options {
+    height: 300px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+}
+
 .profile {
     background-color: lightgrey;
     display: grid;
@@ -22,6 +39,58 @@
 
 header {
     background-color: whitesmoke;
+    padding: 15px;
+}
+
+.top {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.searchbar-container {
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 25px minmax(150px, 1fr);
+    gap: 7.5px;
+    align-items: center;
+}
+
+label[for="searchbar"] {
+}
+
+.search-icon {
+    width: 25px;
+    height: auto;
+    margin: 0;
+}
+
+#searchbar {
+    height: 30px;
+    padding: 15px;
+    margin: 0;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    background-color: lightgrey;
+}
+
+.account {
+    width: 200px;
+    justify-self: right;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.notifications-icon {
+    width: 25px;
+    height: auto;
+}
+
+#profile-picture {
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
 }
 
 .main-content {
