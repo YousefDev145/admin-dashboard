@@ -34,21 +34,21 @@ a {
 .profile {
     background-color: lightgrey;
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 header {
     background-color: whitesmoke;
-    padding: 15px;
+    padding: 10px 40px;
 }
 
 .top {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
 }
 
 .searchbar-container {
-    max-width: 450px;
+    max-width: 550px;
     display: grid;
     grid-template-columns: 25px minmax(150px, 1fr);
     gap: 7.5px;
@@ -75,11 +75,12 @@ label[for="searchbar"] {
 }
 
 .account {
-    width: 200px;
+    width: auto;
     justify-self: right;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
+    gap: 15px
 }
 
 .notifications-icon {
@@ -87,10 +88,43 @@ label[for="searchbar"] {
     height: auto;
 }
 
-#profile-picture {
+.top .profile-picture {
     border-radius: 50%;
     width: 50px;
     height: auto;
+}
+
+.bottom {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: min-content 250px auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom > .profile-picture {
+    border-radius: 50%;
+    width: 75px;
+    height: auto;
+}
+
+.username {
+    font-size: 25px;
+    margin-top: 7.5px;
+}
+
+.buttons {
+    width: 300px;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 35px;
+    gap: 25px;
+}
+
+.buttons button {
+    border-radius: 15px;
+    background-color: blue;
 }
 
 .main-content {
