@@ -8,6 +8,7 @@
 
 :root {
     --primary: #7546AF;
+    --accent: #FFA630;
     --background: #DFDFE2;
     --secondary-background: white;
     --text: black;
@@ -232,6 +233,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .project {
     padding: 25px 15px;
+    border-left: 10px solid var(--accent);
     font-size: .875rem;
     background-color: var(--secondary-background);
     display: grid;
