@@ -58,9 +58,9 @@ button {
 }
 
 .sidebar {
+    padding: 20px 10px;
     color: var(--secondary-background);
     background-color: var(--primary);
-    padding: 10px;
 }
 
 .logo > h2 {
