@@ -1,7 +1,20 @@
+:root {
+    --primary: #0582CA;
+    --background: #D5D5D8;
+    --secondary-background: white;
+    --text: black;
+    --secondary-text: #4C4C42;
+}
+
 * {
     border: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
 }
 
 .layout {
@@ -11,7 +24,8 @@
 }
 
 .sidebar {
-    background-color: steelblue;
+    color: var(--secondary-background);
+    background-color: var(--primary);
     padding: 20px;
 }
 
@@ -36,13 +50,12 @@ a {
 }
 
 .profile {
-    background-color: lightgrey;
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 header {
-    background-color: whitesmoke;
+    background-color: var(--secondary-background);
     padding: 10px 40px;
 }
 
@@ -71,7 +84,7 @@ header {
     border: 0;
     border-radius: 15px;
     outline: none;
-    background-color: lightgrey;
+    background-color: var(--background);
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -126,7 +139,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .buttons button {
     border-radius: 15px;
-    background-color: blue;
+    color: var(--secondary-background);
+    background-color: var(--primary);
 }
 
 .main-content {
@@ -152,10 +166,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .project {
     padding: 15px;
     border-radius: 15px;
-    background-color: whitesmoke;
+    background-color: var(--secondary-background);
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 10px;
+}
+
+.project p, .announcement-cell p, .trending-cell p {
+    color: var(--secondary-text);
 }
 
 .side-info {
@@ -174,7 +192,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .announcements, .trending {
     border-radius: 15px;
-    background-color: whitesmoke;
+    background-color: var(--secondary-background);
     font-size: 12px;
     display: grid;
 }
@@ -206,7 +224,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .announcement-cell, .trending-cell {
-    background-color: whitesmoke;
+    background-color: var(--secondary-background);
 }
 
 .announcement-cell {
