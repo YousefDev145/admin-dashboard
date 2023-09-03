@@ -12,9 +12,13 @@
 
 .sidebar {
     background-color: steelblue;
+    padding: 20px;
 }
 
 ul, li {
+    padding: 0;
+    border: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -23,12 +27,12 @@ a {
     text-decoration: none;
 }
 
-.options {
-    height: 300px;
+.sidebar-options {
     margin-top: 25px;
     display: grid;
     grid-template-rows: auto auto;
     align-content: space-between;
+    gap: 75px;
 }
 
 .profile {
@@ -48,27 +52,33 @@ header {
 }
 
 .searchbar-container {
-    max-width: 550px;
+    max-width: 600px;
     display: grid;
-    grid-template-columns: 25px minmax(150px, 1fr);
-    gap: 7.5px;
+    grid-template-columns: auto minmax(150px, 1fr);
+    gap: 15px;
     align-items: center;
 }
 
-.search-icon {
+.search-icon, .notifications-icon {
     width: 25px;
     height: auto;
-    margin: 0;
 }
 
 #searchbar {
     height: 30px;
-    padding: 15px;
+    padding: 5px 15px;
     margin: 0;
     border: 0;
     border-radius: 15px;
     outline: none;
     background-color: lightgrey;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
 }
 
 .account {
@@ -78,11 +88,6 @@ header {
     grid-template-columns: repeat(3, auto);
     align-items: center;
     gap: 15px
-}
-
-.notifications-icon {
-    width: 25px;
-    height: auto;
 }
 
 .top .profile-picture {
@@ -130,10 +135,17 @@ header {
     grid-template-columns: 1fr 275px;
 }
 
+.projects-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
 .projects {
+    align-self: start;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: 200px;
+    grid-auto-rows: auto;
     gap: 25px;
 }
 
@@ -141,6 +153,9 @@ header {
     padding: 15px;
     border-radius: 15px;
     background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
 }
 
 .side-info {
@@ -154,23 +169,25 @@ header {
 .announcements-container, .trending-container {
     display: grid;
     grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.announcements, .trending {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    display: grid;
 }
 
 .announcements {
-    background-color: whitesmoke;
-    padding: 15px;
-    font-size: 12px;
-    display: grid;
-    grid-template-rows: auto auto auto;
+    padding: 0 30px;
+    grid-template-rows: repeat(auto, 3);
 }
 
 .trending {
-    background-color: whitesmoke;
     padding: 15px;
-    font-size: 12px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
 }
 
 .crop {
@@ -194,7 +211,14 @@ header {
 
 .announcement-cell {
     border-bottom: 1px solid grey;
-    padding: 10px 0;
+    padding: 15px 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 5px;
+}
+
+.announcement-cell:last-child {
+    border: 0;
 }
 
 .trending-cell {
