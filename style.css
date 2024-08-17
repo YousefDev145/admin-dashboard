@@ -170,7 +170,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .bottom {
     margin-top: 15px;
     display: grid;
-    grid-template-columns: min-content 250px auto;
+    grid-template-columns: max-content max-content auto;
     align-items: center;
     gap: 20px;
 }
